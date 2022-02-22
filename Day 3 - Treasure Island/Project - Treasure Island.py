@@ -62,8 +62,5 @@ def play_again():
         play_game()
 
 
-
-
-
 play_game()
 

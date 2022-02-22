@@ -13,5 +13,3 @@ tip_amount = totalBill * percentage
 totalBill += tip_amount
 
 print(f"Each person should pay: ${(totalBill/people):.2f}")
-
-# print(f"Each person should pay: ${round((totalBill/people), 2)}")
