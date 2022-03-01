@@ -1,4 +1,3 @@
-import os
 import random
 from art import logo
 
@@ -42,7 +41,6 @@ def start_game():
     
     if difficulty == 0:
         print("You've run out of guesses, you lose.")
-
 
 start_game()
 
