@@ -28,12 +28,18 @@ def generate():
 
 def find_password():
     website_name = website_input.get()
-    with open("data.json") as data:
-        json_data = json.load(data)
+    try:
+        with open("data.json") as data:
+            json_data = json.load(data)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="Not Data File Found.")
+    else:
         if website_name in json_data:
             email_name = json_data[website_name]["email"]
             password_name = json_data[website_name]["password"]
             messagebox.askokcancel(title=website_name, message=f"Email: {email_name}\nPassword: {password_name}")
+        else:
+            messagebox.showinfo(title="Error", message=f"No details for {website_name} exists.")
 
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
