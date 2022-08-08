@@ -22,7 +22,7 @@ if current_info in birthday_dictionary:
     complete_info = birthday_dictionary[current_info]
     letter_path = f"./letter_templates/letter_{random.randint(1,3)}.txt"
 
-    print("ITS SOMEONES'S BIRTHDAY TODAY")
+    print("ITS SOMEONE'S BIRTHDAY TODAY")
 
     with open(letter_path) as letter:
         content = letter.read()
